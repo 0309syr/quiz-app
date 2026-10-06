@@ -1,32 +1,99 @@
-# React + TypeScript + Vite
+# Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple interactive quiz application built with React and TypeScript. Users can answer multiple-choice questions, receive immediate feedback, and see their final score at the end of the quiz.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live Demo:** Coming soon
 
-## React Compiler
+**GitHub:** https://github.com/0309syr/quiz-app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Start a quiz from the welcome screen
+- Multiple-choice questions
+- Select and confirm an answer
+- Prevents submitting without selecting an answer
+- Shows the correct answer after each question
+- Provides different feedback for correct and incorrect answers
+- Tracks the user's score
+- Displays the final score and number of correct/incorrect answers
+- Allows the user to restart the quiz
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Tech Stack
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+## What I Learned
+
+This project helped me practice building an interactive React application using state and conditional rendering.
+
+### React state management
+
+I used `useState` to manage:
+
+- Whether the quiz has started
+- The current question
+- The selected answer
+- Whether the answer should be displayed
+- The user's score
+- Whether the quiz is complete
+- Validation messages
+
+### Conditional rendering
+
+The application displays different screens depending on the current state:
+
+1. Start screen
+2. Question screen
+3. Answer feedback screen
+4. Final score screen
+
+This helped me understand how React can use state to control what the user sees.
+
+### User interaction
+
+I also practiced handling user actions such as:
+
+- Selecting an answer
+- Confirming an answer
+- Moving to the next question
+- Restarting the quiz
+
+## Running Locally
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/0309syr/quiz-app.git
+cd quiz-app
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Then open the local URL shown in the terminal.
+
+## Future Improvements
+
+Possible improvements for future versions include:
+
+- Add more questions
+- Make the questions reusable through external data
+- Add a progress bar
+- Add different quiz categories
+- Add a timer
+- Improve accessibility
+- Add responsive design improvements
+- Store high scores
+
+## Project Purpose
+
+This project was created as a hands-on React project to practice state management, conditional rendering, event handling, and TypeScript while building a complete interactive application.
