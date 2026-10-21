@@ -88,11 +88,8 @@ Possible improvements for future versions include:
 - Add more questions
 - Make the questions reusable through external data
 - Add a progress bar
-- Add different quiz categories
 - Add a timer
-- Improve accessibility
 - Add responsive design improvements
-- Store high scores
 
 ## Project Purpose
 
